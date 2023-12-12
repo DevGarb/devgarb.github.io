@@ -16,6 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -27,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Sobre</a></li>
                             <li class="nav-item"><a class="nav-link" href="projects.html">Projetos</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
                         </ul>
@@ -53,7 +54,7 @@
                                 <!-- To make this form functional, sign up at-->
                                 <!-- https://startbootstrap.com/solution/contact-forms-->
                                 <!-- to get an API token!-->
-                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <form id="contactForm">
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -97,7 +98,7 @@
                                     <!-- an error submitting the form-->
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
                                     <!-- Submit Button-->
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
                                 </form>
                             </div>
                         </div>
@@ -124,10 +125,43 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js" integrity="sha512-oJCa6FS2+zO3EitUSj+xeiEN9UTr+AjqlBZO58OPadb2RfqwxHpjTU8ckIC8F4nKvom7iru2s8Jwdo+Z8zm0Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script> 
+
+          $(document).ready(function () {
+            $('#phone').mask('(00) 00000-0000');
+            
+            function enviarMensagemWhatsApp() { 
+              let nome = $('#name').val();
+              let email = $('#email').val();
+              let telefone = $('#phone').val();
+              let mensagem = $('#message').val();
+       
+              if (nome && email && telefone && mensagem) { 
+                    let mensagemWhatsApp = `Olá, meu nome é ${nome}.\nMeu email é ${email}.\nMeu telefone é ${telefone}.\nMinha mensagem é: ${mensagem}`;
+             
+                    let numeroWhatsApp = "85985302993"
+      
+                    let linkWhatsApp = `https://api.whatsapp.com/send?phone=55${numeroWhatsApp}&text=${encodeURIComponent(mensagemWhatsApp)}`;
+                    window.open(linkWhatsApp);
+                } else {
+                    alert("Por favor, preencha todos os campos do formulário.");
+                }
+            }
+       
+            $('#submitButton').click(function () {
+              enviarMensagemWhatsApp();
+            });
+          });
+
+        </script>
     </body>
 </html>
+
+
+
+
+
+
+
