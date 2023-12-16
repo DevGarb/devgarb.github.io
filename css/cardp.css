@@ -1,0 +1,12 @@
+/* #cardProject {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px),
+  (min-width: 1100px) {
+  div#cardProject {
+    display: flex;
+    flex-wrap: wrap;
+  }
+} */
