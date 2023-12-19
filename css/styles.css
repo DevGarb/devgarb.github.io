@@ -42,15 +42,15 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 30, 48, 243;
+  --bs-primary-rgb: 243, 115, 53;
   --bs-secondary-rgb: 226, 30, 128;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
+  --bs-light-rgb: 224, 234, 252;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
+  --bs-white-rgb: 30, 48, 95;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -78,7 +78,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #1e30f3;
+  --bs-link-color: #FDC830;
   --bs-link-hover-color: #1826c2;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
@@ -519,7 +519,7 @@ progress {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .display-1 {
@@ -2970,8 +2970,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #1e30f3;
-  --bs-btn-border-color: #1e30f3;
+  --bs-btn-bg: #F37335;
+  --bs-btn-border-color: #F37335;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #1a29cf;
   --bs-btn-hover-border-color: #1826c2;
@@ -2981,8 +2981,8 @@ fieldset:disabled .btn {
   --bs-btn-active-border-color: #1724b6;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1e30f3;
-  --bs-btn-disabled-border-color: #1e30f3;
+  --bs-btn-disabled-bg: #F37335;
+  --bs-btn-disabled-border-color: #F37335;
 }
 
 .btn-secondary {
@@ -3224,11 +3224,11 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-dark {
-  --bs-btn-color: #212529;
+  --bs-btn-color: #fff;
   --bs-btn-border-color: #212529;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
-  --bs-btn-hover-border-color: #212529;
+  --bs-btn-hover-bg: #F37335;
+  --bs-btn-hover-border-color: #F37335;
   --bs-btn-focus-shadow-rgb: 33, 37, 41;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #212529;
@@ -3868,8 +3868,8 @@ fieldset:disabled .btn {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(0, 0, 0, 0.55);
-  --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
+  --bs-navbar-color: #FDC830;
+  --bs-navbar-hover-color: #fff;
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
@@ -11894,11 +11894,25 @@ html {
 
 .bg-gradient-primary-to-secondary {
   background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  /* background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%); */
+  background: -webkit-linear-gradient(180deg, #00001d 0%, #302b63 100%);
+}
+
+.bg-gradient-primary-to-thirdy {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #fd7e14 0%, #ffcd39 100%);
+  /* background: -webkit-linear-gradient(315deg,#1B234F 0%, #03C2E0 50%, #1B234F 100%); */
+}
+
+.bg-gradient-primary-to-forty {
+  background: #1e30f3;
+  /* background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%); */
+  background: -webkit-linear-gradient(300deg, #0D1622 0%, #302b63 80%);
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  background: -webkit-linear-gradient(315deg, #fd7e14 0%, #ffcd39 100%);
+  /* background: -webkit-linear-gradient(315deg,#03C2E0 0%, #F3F9A7 100%); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -12069,4 +12083,12 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+
+
+/* MINHAS PROPRIEDADES PERSONALIZADAS */
+
+.logoTexto {
+  color: #fdc830;
 }
