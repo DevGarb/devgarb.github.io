@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Tag META define metadados sobre um documento HTML. Metadados são dados (informações) sobre dados -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Gerador de senhas" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/luckgen.css" />
+    <title>Gerador de Números da Sorte</title>
+  </head>
+  <body>
+    <div class="container">
+      <span class="texto">Gerador da Sorte!</span>
+      <!-- <img class="logo" src="./assets/logo.png" alt="Gerador senha logo" /> -->
+
+      <div class="container-input">
+        <button id="button" class="button-cta" onclick="generatePassword()">
+          Boa Sorte!
+        </button>
+      </div>
+
+      <div
+        id="container-password"
+        onclick="copyPassword()"
+        class="container-password hide"
+      >
+        <span class="title">Seu número da sorte é:</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip"
+          >Para gerar novos números, clique em "Boa Sorte!". 👆</span
+        >
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="/index.html">Voltar ao site principal</a>
+      
+    </div>
+
+    <script src="./js/luckgen.js"></script>
+  </body>
+</html>
