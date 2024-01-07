@@ -1,4 +1,4 @@
-function gerarNumerosAleatoriosNaoSequenciais() {
+function gerarNumberAleatorio() {
   var numerosAleatorios = [];
 
   while (numerosAleatorios.length < 6) {
@@ -26,17 +26,14 @@ function saoConsecutivos(array, numero) {
   return array.length > 0 && (numero === array[array.length - 1] + 1 || numero === array[array.length - 1] - 1);
 }
 
-function generatePassword() {
-  // Substitua esta função com a sua lógica de geração de senha, utilizando os números gerados
-  var numerosSorteadosNaoSequenciais = gerarNumerosAleatoriosNaoSequenciais();
-  var senhaGerada = numerosSorteadosNaoSequenciais.join('-'); // Exemplo simples de como a senha pode ser gerada
-  document.getElementById('password').textContent = senhaGerada;
-  document.getElementById('container-password').classList.remove('hide');
+function geradorNumeros() {
+  var numberSorteadoNaoSequencial = gerarNumberAleatorio();
+  var numeroGerado = numberSorteadoNaoSequencial.join('-');
+  document.getElementById('number').textContent = numeroGerado;
+  document.getElementById('container-number').classList.remove('hide');
 }
 
-function copyPassword() {
-  // Substitua esta função com a lógica para copiar a senha para a área de transferência, se necessário
-  var senhaCopiada = document.getElementById('password').textContent;
-  console.log('Senha copiada:', senhaCopiada);
-  // Lógica para copiar a senha para a área de transferência
+function infoNumber() {
+  var infoLucky = document.getElementById('number').textContent;
+  console.log('Número Gerado:', infoLucky);
 }
